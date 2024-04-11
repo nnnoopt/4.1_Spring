@@ -21,6 +21,14 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<!--			// добавил-->
+			<exclusions>
+				<exclusion>
+					<groupId>io.netty</groupId>
+					<artifactId>netty-resolver-dns-native-macos</artifactId>
+				</exclusion>
+			</exclusions>
+			<!--			добавил -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,6 +41,14 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--		добавил -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-resolver-dns-native-macos</artifactId>
+			<version> 4.1.78.Final</version>
+			<classifier>osx-aarch_64</classifier>
+		</dependency>
+		<!--		добавил -->
 	</dependencies>
 
 	<dependencyManagement>
